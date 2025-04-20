@@ -1,0 +1,48 @@
+.Escroto {
+    background: linear-gradient(to right, #111, #222 60%, #111);
+    border-bottom: 5px solid orange;
+    box-shadow: 0 0 20px orange;
+    padding: 1rem 2rem;
+    font-family: 'Orbitron', sans-serif;
+
+    ul {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        .item {
+            color: #ff9100;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 2px solid #ff9100;
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            transition: all 0.3s ease-in-out;
+        }
+    }
+}
+
+.item:hover {
+    background: #ff9900;
+    border-color: #fff;
+    color: #000;
+    box-shadow: 0 0 15px #ff9900, 0 0 30px #fff;
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .Escroto ul {
+      flex-direction: row;
+      align-items: center;
+    }
+  
+    .Escroto ul .item {
+      width: 100%;
+      text-align: center;
+      padding: 12px 0;
+    }
+  }

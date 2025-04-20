@@ -1,0 +1,17 @@
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-image: url("https://i.blogs.es/4c042a/manga-dragon-ball-super/650_1200.jpeg");
+    color: #ffca28;
+}
+
+h1{
+    font-size: 4rem;
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: center;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+}

@@ -1,0 +1,35 @@
+#paginacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #111, #222 60%, #111);
+    padding: 1rem 2rem;
+    font-family: 'Orbitron', sans-serif;
+}
+  
+  /* Estilos para cada botón */
+  .pagination .MuiPaginationItem-root {
+    color: #ff9100;
+    font-weight: bold;
+    border: 2px solid #ff9100;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin: 0 5px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Botón activo */
+  .pagination .Mui-selected {
+    background-color: #ff9900;
+    border-color: #fff;
+    color: white;
+    box-shadow: 0 0 15px #ff9900, 0 0 30px #fff;
+  }
+  
+  /* Hover efecto aura */
+  .pagination .MuiPaginationItem-root:hover {
+    background-color: #ff9900;
+    color: #000;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #ff9900;
+  }

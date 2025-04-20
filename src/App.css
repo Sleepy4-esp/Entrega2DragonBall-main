@@ -1,0 +1,21 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 50px;
+  background-image: url("https://www.clarin.com/img/2023/10/24/c5WBR10Pd_360x240__1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
