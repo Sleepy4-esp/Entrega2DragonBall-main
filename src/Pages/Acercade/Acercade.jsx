@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, CardContent, Typography, Grid, Link, Avatar, Box } from '@mui/material';
+import './Acercade.css';
 
 const Acercade = () => {
   const profiles = [
@@ -34,28 +35,32 @@ const Acercade = () => {
   const displayField = (value) => value ? value : "No se acuerda";
 
   return (
-    <Box sx={{ padding: '2rem', backgroundColor: '#111', color: '#fff' }}>
-      <Typography variant="h3" align="center" sx={{ color: '#ffca28', mb: 4 }}>Sobre Nosotros</Typography>
+    <Box className="acerca-container">
+      <Typography variant="h3" align="center" className="acerca-titulo">Sobre Nosotros</Typography>
       <Grid container spacing={4} justifyContent="center">
         {profiles.map((info, idx) => (
-          <Grid item xs={12} md={6} key={idx}>
-            <Card sx={{ backgroundColor: '#222', color: '#fff' }}>
-              <CardContent>
-                <Box display="flex" flexDirection="column" alignItems="center" mb={2}>
-                  <Avatar src={info.image} alt={info.nombre} sx={{ width: 120, height: 120, mb: 2 }} />
-                  <Typography variant="h5" sx={{ color: '#00bcd4' }}>{info.nombre}</Typography>
+          <Grid item xs={12} md={8} key={idx}>
+            <Card className="acerca-card">
+              <CardContent className="acerca-content">
+                <Avatar src={info.image} alt={info.nombre} className="acerca-avatar" />
+                <Box className="acerca-info">
+                  <Typography variant="h5" className="acerca-nombre">{info.nombre}</Typography>
+                  <Typography><strong>Cédula:</strong> <span className="acerca-dato">{displayField(info.id)}</span></Typography>
+                  <Typography><strong>Fecha de Cumpleaños:</strong> <span className="acerca-dato">{displayField(info.cumple)}</span></Typography>
+                  <Typography><strong>Correo Institucional:</strong> <span className="acerca-dato">{displayField(info.correouni)}</span></Typography>
+                  <Typography><strong>Correo Personal:</strong> <span className="acerca-dato">{displayField(info.correopersonal)}</span></Typography>
+                  <Typography>
+                    <strong>Instagram:</strong> {info.instagram ? <span className="acerca-dato"><Link href={info.instagram} target="_blank" className="acerca-link">Ver perfil</Link></span> : <span className="acerca-dato">N/D</span>}
+                  </Typography>
+                  <Typography>
+                    <strong>Facebook:</strong> {info.facebook ? <span className="acerca-dato"><Link href={info.facebook} target="_blank" className="acerca-link">Ver perfil</Link></span> : <span className="acerca-dato">N/D</span>}
+                  </Typography>
+                  <Typography>
+                    <strong>TikTok:</strong> {info.tiktok ? <span className="acerca-dato"><Link href={info.tiktok} target="_blank" className="acerca-link">Ver perfil</Link></span> : <span className="acerca-dato">No Posee</span>}
+                  </Typography>
+                  <Typography><strong>Ubicación Semestral:</strong> <span className="acerca-dato">{displayField(info.grupo)}</span></Typography>
+                  <Typography><strong>Curso:</strong> <span className="acerca-dato">{displayField(info.curso)}</span></Typography>
                 </Box>
-                <Grid container spacing={1}>
-                  <Grid item xs={12}><Typography><strong>Cedula:</strong> {displayField(info.id)}</Typography></Grid>
-                  <Grid item xs={12}><Typography><strong>Fecha de Cumpleaños:</strong> {displayField(info.cumple)}</Typography></Grid>
-                  <Grid item xs={12}><Typography><strong>Correo Institucional:</strong> {displayField(info.correouni)}</Typography></Grid>
-                  <Grid item xs={12}><Typography><strong>Correo Personal:</strong> {displayField(info.correopersonal)}</Typography></Grid>
-                  <Grid item xs={12}><Typography><strong>Instagram:</strong> {info.instagram ? <Link href={info.instagram} target="_blank" sx={{ color: '#ffca28' }}>Ver perfil</Link> : "N/D"}</Typography></Grid>
-                  <Grid item xs={12}><Typography><strong>Facebook:</strong> {info.facebook ? <Link href={info.facebook} target="_blank" sx={{ color: '#ffca28' }}>Ver perfil</Link> : "N/D"}</Typography></Grid>
-                  <Grid item xs={12}><Typography><strong>TikTok:</strong> {info.tiktok ? <Link href={info.tiktok} target="_blank" sx={{ color: '#ffca28' }}>Ver perfil</Link> : "No Posee"}</Typography></Grid>
-                  <Grid item xs={12}><Typography><strong>Ubicación Semestral:</strong> {displayField(info.grupo)}</Typography></Grid>
-                  <Grid item xs={12}><Typography><strong>Curso:</strong> {displayField(info.curso)}</Typography></Grid>
-                </Grid>
               </CardContent>
             </Card>
           </Grid>
