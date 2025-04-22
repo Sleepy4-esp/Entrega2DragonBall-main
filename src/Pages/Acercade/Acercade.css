@@ -1,6 +1,8 @@
 .acerca-container {
+    height: 70vh;
     padding: 2rem;
-    background-color: #111;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJpoQbO0sY378v-XFFfrvVt2twnWAcWZgNMQ&s");
+    background-size: cover;
     color: #fff;
 }
 
@@ -82,3 +84,16 @@
 .acerca-info .acerca-social-links a:hover {
     color: #ffca28;
 }
+
+.acerca-avatar {
+    width: 140px !important;
+    height: 140px !important;
+    border: 3px solid #ffca28;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+  }
+  
+  .acerca-avatar:hover {
+    opacity: 0.8;
+  }

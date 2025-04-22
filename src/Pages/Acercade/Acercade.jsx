@@ -1,6 +1,10 @@
-import React from 'react';
-import { Card, CardContent, Typography, Grid, Link, Avatar, Box } from '@mui/material';
-import './Acercade.css';
+import React from 'react'
+import { Card, CardContent, Typography, Grid, Link, Avatar, Box } from '@mui/material'
+import './Acercade.css'
+
+// IMPORTAR LAS IMÁGENES CORRECTAMENTE
+import juanImg from '../../images/juan.jpeg';
+import jorgeImg from '../../images/jorge.jpeg';
 
 const Acercade = () => {
   const profiles = [
@@ -15,7 +19,8 @@ const Acercade = () => {
       tiktok: "https://www.tiktok.com/@juanserojas203?_t=ZS-8v4JjklJ3dy&_r=1",
       grupo: "6",
       curso: "Programación Web",
-      image: "/images/juan.jpg"
+      image: juanImg,
+      github: "https://github.com/juanse203"
     },
     {
       nombre: "Jorge Luis Kuaran Silva",
@@ -28,7 +33,8 @@ const Acercade = () => {
       tiktok: "",
       grupo: "",
       curso: "Programación Web",
-      image: "/images/jorge.jpg"
+      image: jorgeImg,
+      github: "https://github.com/Sleepy4-esp"
     }
   ];
 
@@ -42,7 +48,10 @@ const Acercade = () => {
           <Grid item xs={12} md={8} key={idx}>
             <Card className="acerca-card">
               <CardContent className="acerca-content">
-                <Avatar src={info.image} alt={info.nombre} className="acerca-avatar" />
+                {/* Avatar dentro de un enlace a GitHub */}
+                <Link href={info.github} target="_blank" rel="noopener noreferrer">
+                  <Avatar src={info.image} alt={info.nombre} className="acerca-avatar" />
+                </Link>
                 <Box className="acerca-info">
                   <Typography variant="h5" className="acerca-nombre">{info.nombre}</Typography>
                   <Typography><strong>Cédula:</strong> <span className="acerca-dato">{displayField(info.id)}</span></Typography>
