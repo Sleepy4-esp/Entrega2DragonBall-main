@@ -48,7 +48,6 @@ const Acercade = () => {
           <Grid item xs={12} md={8} key={idx}>
             <Card className="acerca-card">
               <CardContent className="acerca-content">
-                {/* Avatar dentro de un enlace a GitHub */}
                 <Link href={info.github} target="_blank" rel="noopener noreferrer">
                   <Avatar src={info.image} alt={info.nombre} className="acerca-avatar" />
                 </Link>
